@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Home } from '@/pages'
+import { ErrorBoundary, Home } from '@/pages'
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Home />
+		element: <Home />,
+		errorElement: <ErrorBoundary />
 	}
 ])
 
