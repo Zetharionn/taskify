@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useRouteError } from 'react-router-dom'
 
-export const ErrorBoundary: FC = () => {
+export const Error: FC = () => {
 	const error = useRouteError()
 
 	useEffect(() => {

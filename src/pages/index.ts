@@ -1,4 +1,4 @@
 import { Home } from './Home'
-import { ErrorBoundary } from './ErrorBoundary'
+import { Error } from './Error'
 
-export { Home, ErrorBoundary }
+export { Home, Error }
