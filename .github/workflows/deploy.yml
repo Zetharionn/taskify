@@ -3,9 +3,11 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows:
+      - "Lint"
+    types:
+      - completed
 jobs:
   Deploy:
     runs-on: ubuntu-latest
