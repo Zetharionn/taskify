@@ -8,7 +8,11 @@ export const useTasksStore = create<TasksTypes>()(
 			tasks: [],
 			createTask: (task: TaskTypes) => {
 				set({ tasks: [...get().tasks, task] })
-			}
+			},
+			deleteTask: (taskId: string) =>
+				set({
+					tasks: get().tasks.filter(task => task.id !== taskId)
+				})
 		}),
 		{
 			name: 'tasks-storage',
