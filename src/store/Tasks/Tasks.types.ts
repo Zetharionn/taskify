@@ -24,4 +24,5 @@ export interface TaskTypes {
 export interface TasksTypes {
 	tasks: TaskTypes[]
 	createTask: (task: TaskTypes) => void
+	deleteTask: (taskId: string) => void
 }
