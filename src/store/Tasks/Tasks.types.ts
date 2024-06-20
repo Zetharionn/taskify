@@ -1,10 +1,7 @@
 export const enum EnumPriority {
-	Lowest = '-2',
-	Low = '-1',
-	Normal = '0',
-	Medium = '1',
-	High = '2',
-	Highest = '3'
+	Low = -1,
+	Medium = 0,
+	High = 1
 }
 
 export const enum EnumStatus {
@@ -16,7 +13,7 @@ export const enum EnumStatus {
 
 export interface TaskTypes {
 	id: string
-	description: string
+	body: string
 	priority: EnumPriority
 	status: EnumStatus
 }
