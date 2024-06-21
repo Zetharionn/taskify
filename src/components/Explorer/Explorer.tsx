@@ -1,15 +1,15 @@
 import { FC } from 'react'
-import { ScrollArea } from '@/components/ui/scroll-area.tsx'
-import { useTasksStore } from '@/store/Tasks'
-import { Button } from '@/components/ui/button.tsx'
-import { FilePlus, Trash2 } from 'lucide-react'
-import { Separator } from '@/components/ui/separator.tsx'
+import { useTasksStore } from '@store/Tasks'
+import { Button } from '@components/ui/button.tsx'
+import { Separator } from '@components/ui/separator.tsx'
+import { ScrollArea } from '@components/ui/scroll-area.tsx'
 import {
 	ContextMenu,
 	ContextMenuContent,
 	ContextMenuItem,
 	ContextMenuTrigger
-} from '@/components/ui/context-menu.tsx'
+} from '@components/ui/context-menu.tsx'
+import { FilePlus, Trash2 } from 'lucide-react'
 
 export const Explorer: FC = () => {
 	const tasks = useTasksStore(state => state.tasks)

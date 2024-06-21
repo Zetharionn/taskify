@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Box } from 'lucide-react'
-import { Explorer } from '@/components'
+import { Explorer } from '@components/Explorer'
 
 export const Home: FC = () => {
 	return (
