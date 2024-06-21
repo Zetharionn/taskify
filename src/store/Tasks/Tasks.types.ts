@@ -13,6 +13,7 @@ export const enum EnumStatus {
 
 export interface TaskTypes {
 	id: string
+	title: string
 	body: string
 	priority: EnumPriority
 	status: EnumStatus
@@ -20,6 +21,6 @@ export interface TaskTypes {
 
 export interface TasksTypes {
 	tasks: TaskTypes[]
-	createTask: (task: TaskTypes) => void
+	createTask: () => void
 	deleteTask: (taskId: string) => void
 }
