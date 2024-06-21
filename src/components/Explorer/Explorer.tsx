@@ -25,7 +25,7 @@ export const Explorer: FC = () => {
 	}
 
 	return (
-		<ScrollArea className='h-[80vh] w-[12vw] rounded-md border'>
+		<ScrollArea className='h-[75vh] min-h-32 w-[12vw] min-w-48 rounded-md border'>
 			<div className='p-4'>
 				<div className='flex flex-row justify-between items-center'>
 					<h4 className='text-xl font-medium leading-none'>Explorer</h4>
