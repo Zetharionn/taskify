@@ -11,7 +11,7 @@ export const enum EnumStatus {
 	Done = 'Done'
 }
 
-export interface TaskTypes {
+export interface ITask {
 	id: string
 	title: string
 	body: string
@@ -19,8 +19,8 @@ export interface TaskTypes {
 	status: EnumStatus
 }
 
-export interface TasksTypes {
-	tasks: TaskTypes[]
+export interface ITasksStore {
+	tasks: ITask[]
 	createTask: () => void
 	deleteTask: (taskId: string) => void
 }

@@ -1,27 +1,14 @@
 import { create } from 'zustand'
-import {
-	EnumPriority,
-	EnumStatus,
-	TasksTypes,
-	TaskTypes
-} from './Tasks.types.ts'
+import { ITasksStore } from './Tasks.types.ts'
 import { persist } from 'zustand/middleware'
-import { v4 as uuidv4 } from 'uuid'
+import { generateDefaultTask } from '@store/Tasks/helpers/generateDefaultTask.ts'
 
-export const useTasksStore = create<TasksTypes>()(
+export const useTasksStore = create<ITasksStore>()(
 	persist(
 		(set, get) => ({
 			tasks: [],
 			createTask: () => {
-				const defaultTask: TaskTypes = {
-					id: uuidv4(),
-					title: 'Untitled',
-					body: '',
-					priority: EnumPriority.Medium,
-					status: EnumStatus.Todo
-				}
-
-				set({ tasks: [...get().tasks, defaultTask] })
+				set({ tasks: [...get().tasks, generateDefaultTask()] })
 			},
 			deleteTask: (taskId: string) =>
 				set({
