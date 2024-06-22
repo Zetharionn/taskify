@@ -21,6 +21,9 @@ export interface ITask {
 
 export interface ITasksStore {
 	tasks: ITask[]
+	selectedTask: ITask | null
 	createTask: () => void
+	editTask: (value: string) => void
 	deleteTask: (taskId: string) => void
+	selectTask: (task: ITask) => void
 }
